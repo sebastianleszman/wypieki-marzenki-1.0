@@ -46,9 +46,9 @@
   height: 60vh;
   margin: auto;
   margin-bottom: 5rem;
-  background-image: url("/assets/mockup4.jpg");
+  background-image: url("/assets/mockup1.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   background-size: cover;
 }
 
