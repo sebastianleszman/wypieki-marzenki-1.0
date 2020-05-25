@@ -45,8 +45,10 @@
   width: 50%;
   height: 60vh;
   margin: auto;
-  background-image: url("/assets/mockup3.jpg");
+  margin-bottom: 5rem;
+  background-image: url("/assets/mockup4.jpg");
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
