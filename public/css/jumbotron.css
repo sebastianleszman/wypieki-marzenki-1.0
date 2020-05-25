@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
+
+/* mobile */
+.section-jumbotron1 {
+  width: 100%;
+  background-image: url("/assets/background8.jpg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 60vh;
+  margin: 0;
+  background-color: #fefefe;
+}
+.section-jumbotron1 .text-group {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 40px;
+}
+
+.section-jumbotron1 h1::before {
+  content: "Przepyszne ";
+  color: var(--second);
+}
+
+.section-jumbotron1 h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 8rem;
+}
+
+.section-jumbotron1 p {
+  font-family: "Amatic SC", cursive;
+  font-size: 3rem;
+  /* margin: 0; */
+}
+.section-jumbotron1 a {
+  font-size: 3rem;
+  font-family: "Shadows Into Light Two", cursive;
+}
+
+/* section-jumbotron2 */
+.section-jumbotron2 {
+  width: 50%;
+  height: 70vh;
+  margin: auto;
+  background-image: url("/assets/mockup3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-jumbotron2 .text-group {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.section-jumbotron2 h1 {
+  color: var(--second);
+  margin-bottom: 2rem;
+  font-family: "Amatic SC", cursive;
+  font-size: 4rem;
+}
+.section-jumbotron2 p {
+  font-size: 2rem;
+}
