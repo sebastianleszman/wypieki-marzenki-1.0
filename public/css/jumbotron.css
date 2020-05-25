@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
 
 /* mobile */
 .section-jumbotron1 {
@@ -33,7 +32,6 @@
 .section-jumbotron1 p {
   font-family: "Amatic SC", cursive;
   font-size: 3rem;
-  /* margin: 0; */
 }
 .section-jumbotron1 a {
   font-size: 3rem;
@@ -65,5 +63,15 @@
   font-size: 4rem;
 }
 .section-jumbotron2 p {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-family: "Amatic SC", cursive;
+}
+
+.section-offer-preview {
+  width: 70%;
+  margin: auto;
+}
+
+.card__actions a {
+  font-size: 1.5rem;
 }

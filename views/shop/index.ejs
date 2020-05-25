@@ -1,10 +1,13 @@
 <%- include('../includes/head.ejs') %>
 <link rel="stylesheet" href="/css/jumbotron.css">
+<link rel="stylesheet" href="/css/product.css">
 </head>
 
 <body>
 
     <%- include('../includes/navigation.ejs') %>
+
+    <!-- section-jumbotron -->
 
     <div class="section-jumbotron1">
         <div class="text-group">
@@ -15,12 +18,75 @@
     </div>
     <div class="section-jumbotron2">
         <div class="text-group">
-            <h1>Jedyne Słodkości Jakich Potrzebujesz</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam possimus, ipsam dignissimos
-                    sapiente
-                    ab
-                    vero optio quo sit animi perferendis.</p>
+            <h1>Jedyna Słodkoś Jakiej Potrzebujesz</h3>
+                <p>Nasze wypieki zrobione są z najlepszej jakości składników, a receptury przekazywane z pokolenia na
+                    pokolenie, aby zapewnić jeszcze dłuższą chwile przyjemności.</p>
         </div>
     </div>
+
+    <!-- section-offer-preview -->
+    <div class="section-offer-preview grid">
+        <article class="card product-item">
+            <header class="card__header">
+                <h1 class="product__title">
+                    Ciata Bezowe
+                </h1>
+            </header>
+            <div class="card__image">
+                <img src="/assets/beza1.jpg" alt="">
+            </div>
+            <div class="card__content">
+                <p class="product__description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, hic. Autem officia
+                    reprehenderit quam deleniti, corporis corrupti error delectus voluptatibus tempore id neque impedit
+                    facere veniam beatae alias eaque aut.
+                </p>
+            </div>
+            <div class="card__actions">
+                <a href="/products" class="btn">Szczegóły</a>
+            </div>
+        </article>
+        <article class="card product-item">
+            <header class="card__header">
+                <h1 class="product__title">
+                    Torty Okolicznościowe
+                </h1>
+            </header>
+            <div class="card__image">
+                <img src="/assets/ciasto3.jpg" alt="">
+            </div>
+            <div class="card__content">
+                <p class="product__description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, hic. Autem officia
+                    reprehenderit quam deleniti, corporis corrupti error delectus voluptatibus tempore id neque impedit
+                    facere veniam beatae alias eaque aut.
+                </p>
+            </div>
+            <div class="card__actions">
+                <a href="/products" class="btn">Szczegóły</a>
+            </div>
+        </article>
+        <article class="card product-item">
+            <header class="card__header">
+                <h1 class="product__title">
+                    Ciasta Na Zamówienie
+                </h1>
+            </header>
+            <div class="card__image">
+                <img src="/assets/talerz3.jpg" alt="">
+            </div>
+            <div class="card__content">
+                <p class="product__description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, hic. Autem officia
+                    reprehenderit quam deleniti, corporis corrupti error delectus voluptatibus tempore id neque impedit
+                    facere veniam beatae alias eaque aut.
+                </p>
+            </div>
+            <div class="card__actions">
+                <a href="/products" class="btn">Szczegóły</a>
+            </div>
+        </article>
+    </div>
+
 
     <%- include('../includes/end.ejs') %>

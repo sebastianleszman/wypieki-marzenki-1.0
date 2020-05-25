@@ -17,6 +17,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 
 body {
   padding: 0;
@@ -206,9 +209,8 @@ form {
   padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
-  border: 1px solid var(--first);
-  color: var(--first);
-  background: white;
+  color: var(--white);
+  background: var(--first);
   border-radius: 3px;
   cursor: pointer;
 }

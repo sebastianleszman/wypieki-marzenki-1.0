@@ -1,0 +1,16 @@
+.product-item {
+  width: 30rem;
+  max-width: 95%;
+  margin: 6rem;
+}
+
+.product__title {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+}
+
+.product__description {
+  text-align: center;
+  font-size: 1.5rem;
+}
