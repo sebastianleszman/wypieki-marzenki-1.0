@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
 /* variables */
 :root {
-  --first: #cae2f7;
+  --first: #0088a9;
   --second: #a03e99;
   --third: #fff5ec;
-  --forth: #a03e99;
+  --forth: #7e3279;
+  --fifth: #ff6045;
   --black: #000;
   --dark: #333;
   --gray: #ccc;
@@ -14,222 +16,64 @@
   --white: #fff;
 }
 
+/* Reseting */
+
 * {
   box-sizing: border-box;
-}
-html {
-  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-main {
-  padding: 1rem;
-  margin: auto;
-}
-
-form {
-  display: inline;
-}
-
-.centered {
-  text-align: center;
-}
-
-.main-header {
-  width: 100%;
-  height: 10rem;
+  font-size: 16px;
   background-color: var(--white);
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
+  color: var(--black);
+  font-family: "Lato", sans-serif;
 }
 
-.logo {
-  height: auto;
-  display: none;
+img {
+  width: 100%;
 }
 
-.main-header__nav {
-  height: 100%;
-  display: none;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.main-header__item-list {
+ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
 }
 
-.main-header__item {
-  margin: 0 1rem;
-  padding: 0;
+li {
 }
 
-.main-header__item a {
+a {
   text-decoration: none;
   color: var(--black);
-  font-size: 2rem;
-  font-family: "Shadows Into Light Two", cursive;
-}
-
-.main-header__item a:hover,
-.main-header__item a:active,
-.main-header__item a.active {
-  color: var(--second);
-}
-
-.mobile-nav {
-  width: 30rem;
-  height: 100vh;
-  max-width: 90%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: white;
-  z-index: 10;
-  padding: 2rem 1rem 1rem 2rem;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-out;
-}
-
-.mobile-nav.open {
-  transform: translateX(0);
-}
-
-.mobile-nav__item-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
-.mobile-nav__item {
-  margin: 1rem;
-  padding: 0;
-}
-
-.mobile-nav__item a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.5rem;
-  padding: 0.5rem 2rem;
-}
-
-.mobile-nav__item a:active,
-.mobile-nav__item a:hover,
-.mobile-nav__item a.active {
-  background: var(--first);
-  color: white;
-  border-radius: 3px;
-}
-
-#side-menu-toggle {
-  border: 1px solid white;
-  font: inherit;
-  padding: 0.5rem;
-  display: block;
-  background: transparent;
-  color: white;
+  background-color: var(--white);
   cursor: pointer;
 }
 
-#side-menu-toggle:focus {
-  outline: none;
-}
+/* Utilieties */
 
-#side-menu-toggle:active,
-#side-menu-toggle:hover {
-  color: var(--second);
-  border-color: var(--second);
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
+.img--contain {
+  height: 100%;
   width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 5;
-  display: none;
+  object-fit: contain;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-}
-
-.card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-}
-
-.card__header,
-.card__content {
-  padding: 1rem;
-}
-
-.card__header h1,
-.card__content h1,
-.card__content h2,
-.card__content p {
-  margin: 0;
-}
-
-.card__image {
+.img--cover {
+  height: 100%;
   width: 100%;
-}
-
-.card__image img {
-  width: 100%;
-}
-
-.card__actions {
-  padding: 1rem;
-  text-align: center;
-}
-
-.card__actions button,
-.card__actions a {
-  margin: 0 0.25rem;
+  object-fit: cover;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
-  font: inherit;
+  transition: all 0.3s ease 0s;
   color: var(--white);
-  background: var(--first);
-  border-radius: 3px;
+  background-color: var(--second);
+  border-radius: 2rem;
   cursor: pointer;
 }
 
-.btn:hover,
-.btn:active {
-  background-color: var(--first);
-  color: white;
-}
-
-@media (min-width: 768px) {
-  .logo {
-    display: block;
-  }
-  .main-header__nav {
-    display: flex;
-  }
-
-  #side-menu-toggle {
-    display: none;
-  }
+.btn:hover {
+  background-color: var(--forth);
 }

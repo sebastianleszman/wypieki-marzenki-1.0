@@ -1,0 +1,226 @@
+/* Mobile */
+
+.main-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.logo {
+  margin-top: 1rem;
+  cursor: pointer;
+  height: 20vh;
+  width: 100%;
+}
+
+/* Hamburger */
+
+.main-header__nav-toggle-btn {
+  /* padding robi dodatkowe pole */
+  padding: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  /* zmienilem z index na stale */
+  z-index: 10;
+}
+
+.main-header__nav-toggle-btn:focus {
+}
+
+.hamburger__box {
+  width: 2.5rem;
+  height: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.hamburger__inner,
+.hamburger__inner::before,
+.hamburger__inner::after {
+  /* do krecenia */
+  transition: all 0.3s ease-in-out 0.1s;
+  background-color: var(--forth);
+  position: absolute;
+  left: 0;
+  border-radius: 1rem;
+  height: 4px;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+  content: "";
+}
+
+.hamburger__inner::after {
+  top: 0.5rem;
+  width: 90%;
+}
+
+.hamburger__inner::before {
+  bottom: 0.5rem;
+  width: 70%;
+}
+
+/* nav */
+
+.main-header__nav {
+  display: flex;
+  transform: translateX(-300px);
+  transition: transform 0.3s 0.1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+}
+
+.main-header__item-list {
+  flex-direction: column;
+  background-color: var(--third);
+  width: 100%;
+  padding-top: 6rem;
+  /* wydluza menu */
+  /* padding: 1rem 0 1rem 0; */
+}
+
+.main-header__item {
+  /* border-bottom: 1px solid var(--gray); */
+  text-align: left;
+}
+
+.main-header__item:hover {
+  background-color: var(--cream);
+}
+
+/* .main-header__item:first-child {
+    border-top: 1px solid var(--gray);
+  } */
+
+.main-header__item a {
+  transition: all 0.3s ease 0s;
+  background-color: inherit;
+  font-size: 1rem;
+  /* dzieki width100 jak wciskam na telefonie to moge na calej dlugosci */
+  width: 100%;
+  padding: 1rem 2rem;
+  /* aby dzilal padding musi byc inline-block */
+  display: inline-block;
+}
+
+/* active class */
+.menu--active {
+  transform: translateX(0px);
+}
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner::before {
+  width: 100%;
+  transform: translateY(8px) rotate(135deg);
+}
+
+.hamburger--active .hamburger__inner::after {
+  transform: translateY(-8px) rotate(-135deg);
+  width: 100%;
+}
+
+/* ---------------- Tablet -------------------------------------*/
+@media (min-width: 620px) {
+}
+@media (min-width: 768px) {
+  .main-header {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--white);
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 20vh;
+    width: unset;
+    margin-right: auto;
+  }
+  .main-header__nav-toggle-btn {
+    display: none;
+  }
+  .main-header__nav {
+    transform: unset;
+    transition: unset;
+    position: unset;
+    width: unset;
+    height: 100%;
+    /* padding: 0; */
+    /* margin: 0; */
+  }
+  .main-header__item-list {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: unset;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-header__item {
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    margin-left: 1rem;
+  }
+
+  .main-header__item:hover {
+    background-color: inherit;
+  }
+
+  .main-header__item a {
+    transition: unset;
+    background-color: inherit;
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    padding: unset;
+    padding: 1rem 1rem;
+    margin: 0;
+    border-bottom: 2px solid var(--white);
+  }
+
+  .main-header__item a:hover {
+    border-bottom: 2px solid var(--second);
+  }
+}
+/* ---------------- Laptop -------------------------------------*/
+@media (min-width: 960) {
+}
+/* ---------------- Desktop -------------------------------------*/
+@media (min-width: 1200) {
+}

@@ -1,16 +1,18 @@
-const backdrop = document.querySelector(".backdrop");
-const sideDrawer = document.querySelector(".mobile-nav");
-const menuToggle = document.querySelector("#side-menu-toggle");
-
-function backdropClickHandler() {
-  backdrop.style.display = "none";
-  sideDrawer.classList.remove("open");
-}
+const menuToggleBtn = document.querySelector(".main-header__nav-toggle-btn");
+const mainNav = document.querySelector(".main-header__nav");
 
 function menuToggleClickHandler() {
-  backdrop.style.display = "block";
-  sideDrawer.classList.add("open");
+  mainNav.classList.toggle("menu--active");
+  menuToggleBtn.classList.toggle("hamburger--active");
 }
 
-backdrop.addEventListener("click", backdropClickHandler);
-menuToggle.addEventListener("click", menuToggleClickHandler);
+menuToggleBtn.addEventListener("click", menuToggleClickHandler);
+
+document.addEventListener("keydown", function (event) {
+  if (mainNav.classList.contains("menu--active")) {
+    if (event.key === "Escape") {
+      mainNav.classList.remove("menu--active");
+      menuToggleBtn.classList.remove("hamburger--active");
+    }
+  }
+});

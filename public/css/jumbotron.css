@@ -1,22 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
-
 /* mobile */
 .section-jumbotron1 {
   width: 100%;
   background-image: url("/assets/background8.jpg");
-  background-size: contain;
-  background-position: right;
+  background-size: cover;
+  background-position: left center;
   background-repeat: no-repeat;
-  height: 60vh;
+  height: 50vh;
+  padding: 0;
   margin: 0;
   background-color: #fefefe;
 }
-.section-jumbotron1 .text-group {
-  width: 70%;
-  margin: 0 auto;
+.section-jumbotron1__text-group {
+  width: 80%;
   text-align: left;
-  padding: 40px;
+  padding: 2rem 0 0 1rem;
 }
 
 .section-jumbotron1 h1::before {
@@ -26,52 +23,56 @@
 
 .section-jumbotron1 h1 {
   font-family: "Amatic SC", cursive;
-  font-size: 8rem;
+  font-size: 3rem;
 }
 
 .section-jumbotron1 p {
-  font-family: "Amatic SC", cursive;
-  font-size: 3rem;
+  display: none;
 }
+
 .section-jumbotron1 a {
-  font-size: 3rem;
-  font-family: "Shadows Into Light Two", cursive;
+  margin-top: 2rem;
+  padding: 0.2rem 2rem;
+  font-size: 2rem;
+  font-family: "Amatic SC", cursive;
 }
 
 /* section-jumbotron2 */
 .section-jumbotron2 {
-  width: 50%;
-  height: 60vh;
+  width: 100%;
+  height: 40vh;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   background-image: url("/assets/mockup1.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center top;
+  background-size: contain;
 }
 
-.section-jumbotron2 .text-group {
+.section-jumbotron2__text-group {
   width: 100%;
   margin: auto;
+  padding-top: 12rem;
   text-align: center;
-  padding: 40px;
 }
 
 .section-jumbotron2 h1 {
-  color: var(--second);
-  margin-bottom: 2rem;
+  color: var(--fifth);
   font-family: "Amatic SC", cursive;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .section-jumbotron2 p {
-  font-size: 3rem;
-  font-family: "Amatic SC", cursive;
+  display: none;
 }
 
-.section-offer-preview {
-  width: 70%;
-  margin: auto;
+/* ---------------- Tablet -------------------------------------*/
+@media (min-width: 620px) {
 }
-
-.card__actions a {
-  font-size: 1.5rem;
+@media (min-width: 768px) {
+}
+/* ---------------- Laptop -------------------------------------*/
+@media (min-width: 960) {
+}
+/* ---------------- Desktop -------------------------------------*/
+@media (min-width: 1200) {
 }
