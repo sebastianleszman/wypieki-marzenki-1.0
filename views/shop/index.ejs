@@ -1,6 +1,7 @@
 <%- include('../includes/head.ejs') %>
 <link rel="stylesheet" href="/css/navigation.css">
 <link rel="stylesheet" href="/css/jumbotron.css">
+<link rel="stylesheet" href="/css/gallery.css">
 
 </head>
 
@@ -8,25 +9,39 @@
 
     <%- include('../includes/navigation.ejs') %>
 
-    <!-- section-jumbotron -->
+    <!-- section__hero__1 -->
 
-    <div class="section-jumbotron1">
-        <div class="section-jumbotron1__text-group">
-            <h1>ciasta dla Ciebie</h1>
-            <p>Wypieki Marzenki oferują najlepsze ciasta i desery</p>
-            <a href="/products" class="btn">Zobacz Ofertę</a>
+    <section class="section__hero__1">
+        <div class="wrapper-img">
+        <h1 class="size-3">Ciasta dla Ciebie</h1>
+        <p class="lead">Najlepsze ciasta i desery</p>
+        <a href="/products" class="btn btn-lg btn-first">Zobacz Ofertę</a>
         </div>
-    </div>
-    <div class="section-jumbotron2">
-        <div class="section-jumbotron2__text-group">
-            <h1>Jedyna Słodkoś Jakiej Potrzebujesz</h3>
-                <p>Nasze wypieki zrobione są z najlepszej jakości składników, a receptury przekazywane z pokolenia na
-                    pokolenie, aby zapewnić jeszcze dłuższą chwile przyjemności.</p>
+    </section>
+
+    <!-- section__hero__2 -->
+
+    <section class="section__hero__2">
+        <div class="wrapper-img">
+        <h1 class="size-3">Jedyna Słodkoś Jakiej Potrzebujesz</h1>
+        <p class="lead">
+            Nasze wypieki zrobione są z najlepszej jakości składników, a receptury
+            przekazywane z pokolenia na pokolenie, aby zapewnić jeszcze dłuższą
+            chwile przyjemności.
+        </p>
         </div>
-    </div>
+    </section>
+
+    <section class="gallery">
+        <div class="grid">
+            <img src="https://source.unsplash.com/1200x800?mountain" />
+            <img src="https://source.unsplash.com/1200x800?nature" />
+            <img src="https://source.unsplash.com/1200x800?valley" />
+        </div>
+    </section>
 
     <!-- section-offer-preview -->
-    <div class="section-offer-preview grid">
+    <!-- <div class="section-offer-preview grid">
         <article class="card product-item">
             <header class="card__header">
                 <h1 class="product__title">
@@ -87,7 +102,7 @@
                 <a href="/products" class="btn">Szczegóły</a>
             </div>
         </article>
-    </div>
+    </div> -->
 
 
     <%- include('../includes/end.ejs') %>
