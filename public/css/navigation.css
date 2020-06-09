@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   background-color: var(--white);
+  position: sticky;
+  top: 0;
 }
 
 .logo {
@@ -25,7 +27,7 @@
   background-color: transparent;
   border: 0;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 1rem;
   left: 1rem;
   /* zmienilem z index na stale */
