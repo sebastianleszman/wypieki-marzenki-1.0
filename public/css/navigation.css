@@ -5,8 +5,9 @@
   display: flex;
   flex-direction: column;
   background-color: var(--white);
-  position: sticky;
+  position: fixed;
   top: 0;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
 .logo {

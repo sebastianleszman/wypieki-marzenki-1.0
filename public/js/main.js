@@ -1,3 +1,5 @@
+// Navbar
+
 const menuToggleBtn = document.querySelector(".main-header__nav-toggle-btn");
 const mainNav = document.querySelector(".main-header__nav");
 
@@ -16,6 +18,18 @@ document.addEventListener("keydown", function (event) {
     }
   }
 });
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".main-header").style.top = "0";
+  } else {
+    document.querySelector(".main-header").style.top = "-30vh";
+  }
+  prevScrollpos = currentScrollPos;
+};
 
 // Gallery
 
