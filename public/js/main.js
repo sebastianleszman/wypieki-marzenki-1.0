@@ -19,17 +19,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-let prevScrollpos = window.scrollY;
-window.onscroll = function () {
-  let currentScrollPos = window.scrollY;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector(".main-header").style.top = "0";
-  } else {
-    document.querySelector(".main-header").style.top = "-30vh";
-  }
-  prevScrollpos = currentScrollPos;
-};
+
 
 // Gallery
 

@@ -5,12 +5,8 @@
   display: flex;
   flex-direction: column;
   background-color: var(--white);
-  position: fixed;
+  position: sticky;
   top: 0;
-  transition: top 0.2s ease-in-out; /* Transition effect when sliding down (and up) */
-}
-.nav-up {
-  top: -25px; /* same as header height. use variables in LESS/SASS */
 }
 
 .logo {
