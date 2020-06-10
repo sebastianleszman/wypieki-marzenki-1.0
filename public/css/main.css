@@ -281,6 +281,9 @@ h6 {
 /* Jumbotron */
 
 .section-jumbotron {
+  width: 90%;
+  margin: auto;
+  margin-top: 25vh;
 }
 
 .jumbotron,
