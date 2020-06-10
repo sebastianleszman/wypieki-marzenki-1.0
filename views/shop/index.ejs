@@ -1,6 +1,6 @@
 <%- include('../includes/head.ejs') %>
 <link rel="stylesheet" href="/css/navigation.css">
-<link rel="stylesheet" href="/css/jumbotron.css">
+<link rel="stylesheet" href="/css/card.css">
 <link rel="stylesheet" href="/css/gallery.css">
 
 </head>
@@ -9,36 +9,104 @@
 
     <%- include('../includes/navigation.ejs') %>
 
-    <!-- section__hero__1 -->
+    <!-- section-jumbotron -->
 
-    <section class="section__hero__1">
-        <div class="wrapper-img">
-        <h1 class="size-3">Ciasta dla Ciebie</h1>
-        <p class="lead">Najlepsze ciasta i desery</p>
-        <a href="/products" class="btn btn-lg btn-first">Zobacz Ofertę</a>
+    <section class="section-jumbotron">
+        <div class="jumbotron--img">
+            <div class="group">
+                <h1 class="size-1">Przepyszne ciasta dla Ciebie</h1>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                    atque obcaecati asperiores possimus ducimus delectus.
+                </p>
+                <hr class="my-4" />
+                <a href="/products" class="btn btn-first" role="button">Zobacz Ofertę</a>
+            </div>
+            <div class='img-box'>
+                <img src="/assets/background8.jpg" alt="" class='img--cover'>
+            </div>
+    </section>
+
+    <section class="cards">
+        <!-- card--1 -->
+        <a href="#" class="card-btn">
+            <article class="card card-1">
+                <div class="card__img"></div>
+
+                <div class="card__info">
+                    <span class="card__category">Torty</span>
+                    <h3 class="card__title size-3">Torty Okolicznościowe</h3>
+                    <p class="card__text lead">
+                        Torty na komunie, Śluby, Przyjęcia
+                    </p>
+                    <span class="card__author">Wypieki Marzenki</span>
+                </div>
+            </article>
+        </a>
+
+        <!-- card-2 -->
+        <a href="#" class="card-btn">
+            <article class="card card-2">
+                <div class="card__img"></div>
+
+                <div class="card__info">
+                    <span class="card__category">Bezy</span>
+                    <h3 class="card__title size-3">Bezowe Rozkosze</h3>
+                    <p class="card__text lead">
+                        Najlepsze ciasta bezowe, Małe bziki
+                    </p>
+                    <span class="card__author">Wypieki Marzenki</span>
+                </div>
+            </article>
+        </a>
+
+        <!-- card-3 -->
+        <a href="#" class="card-btn">
+            <article class="card card-3">
+                <div class="card__img"></div>
+
+                <div class="card__info">
+                    <span class="card__category">Ciasta</span>
+                    <h3 class="card__title size-3">Ciasta Domowe</h3>
+                    <p class="card__text lead">
+                        Ciasta jak u babci
+                    </p>
+                    <span class="card__author">Wypieki Marzenki</span>
+                </div>
+            </article>
+        </a>
+
+        <!-- card-4 -->
+        <a href="#" class="card-btn">
+            <article class="card card-4">
+                <div class="card__img"></div>
+
+                <div class="card__info">
+                    <span class="card__category">Ciasta</span>
+                    <h3 class="card__title size-3">Ciasta Domowe</h3>
+                    <p class="card__text lead">
+                        Ciasta jak u babci
+                    </p>
+                    <span class="card__author">Wypieki Marzenki</span>
+                </div>
+            </article>
+        </a>
+    </section>
+
+    <section class="section-gallery">
+        <h1>Galeria</h1>
+        <div class="gallery">
+            <img src="/assets/ciasto3.jpg" />
+            <img src="/assets/background2.jpg" />
+            <img src="/assets/talerz3.jpg" />
+            <img src="/assets/talerz1.jpg" />
+            <img src="/assets/talerz2.jpg" />
+            <img src="/assets/cake2.jpg" />
+            <img src="/assets/background4.jpg" />
+            <img src="/assets/gora3.jpg" />
         </div>
     </section>
 
-    <!-- section__hero__2 -->
-
-    <section class="section__hero__2">
-        <div class="wrapper-img">
-        <h1 class="size-3">Jedyna Słodkoś Jakiej Potrzebujesz</h1>
-        <p class="lead">
-            Nasze wypieki zrobione są z najlepszej jakości składników, a receptury
-            przekazywane z pokolenia na pokolenie, aby zapewnić jeszcze dłuższą
-            chwile przyjemności.
-        </p>
-        </div>
-    </section>
-
-    <section class="gallery">
-        <div class="grid">
-            <img src="https://source.unsplash.com/1200x800?mountain" />
-            <img src="https://source.unsplash.com/1200x800?nature" />
-            <img src="https://source.unsplash.com/1200x800?valley" />
-        </div>
-    </section>
 
     <!-- section-offer-preview -->
     <!-- <div class="section-offer-preview grid">

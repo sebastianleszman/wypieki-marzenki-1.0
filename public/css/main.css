@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400&display=swap");
 
 /* variables */
 :root {
@@ -10,6 +12,7 @@
   --fifth: #ff6045;
   --black: #000;
   --dark: #333;
+  --silver: #868686;
   --gray: #ccc;
   --cream: #f4f4f4;
   --white: #fff;
@@ -51,7 +54,7 @@ a {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 hr {
@@ -74,6 +77,12 @@ h6 {
   margin-top: 0;
 }
 
+/* Padding */
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
 .pt-4 {
   padding-top: 1.5rem !important;
 }
@@ -83,10 +92,32 @@ h6 {
   padding-bottom: 1.5rem !important;
 }
 
+.px-4 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Margin */
+
+.m-4 {
+  margin: 1.5rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
 .my-4 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
 }
+
+.mx-4 {
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
+}
+
+/* Img */
 
 .img--contain {
   height: 100%;
@@ -99,6 +130,8 @@ h6 {
   width: 100%;
   object-fit: cover;
 }
+
+/* Btn */
 
 .btn {
   display: inline-block;
@@ -133,18 +166,191 @@ h6 {
   background-color: var(--forth);
 }
 
-.size-4 {
-  font-size: 3.5rem;
+/* Font */
+
+.size-1 {
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.2;
 }
+.size-2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 .size-3 {
-  font-size: 3rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.size-4 {
+  font-size: 0.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.size-5 {
+  font-size: 0.25rem;
   font-weight: 300;
   line-height: 1.2;
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   font-weight: 300;
+}
+
+/* Card */
+
+.card-btn {
+  background-color: transparent;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-content: center;
+  grid-gap: 25px;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  border-radius: 12px;
+  background-color: var(--white);
+}
+
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
+  z-index: 1;
+}
+
+.card__info {
+  padding: 0.75rem 1rem;
+  background-color: var(--white);
+}
+
+.card__category {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: var(--silver);
+}
+
+.card__title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+}
+
+.card__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.card__author {
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: rgba(255, 0, 0, 0.5);
+}
+
+/* Jumbotron */
+
+.section-jumbotron {
+}
+
+.jumbotron,
+.jumbotron--img {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  text-align: left;
+  font-weight: 400;
+  color: var(--black);
+  background-color: #fefefe;
+}
+.jumbotron--img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group {
+  padding: 1rem;
+  padding-left: 2rem;
+}
+
+.img-box {
+  background-image: url("https://source.unsplash.com/random");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  width: 100%;
+  height: 400px;
+  margin: 1rem;
+}
+
+/* Mobile */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .img-box {
+    display: block;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  html {
+    font-size: 1.2rem;
+  }
+  .card__img {
+    height: 200px;
+  }
+
+  .card {
+    display: block;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.6rem;
+  }
+  .group {
+    padding-left: 4rem;
+  }
 }

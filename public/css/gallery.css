@@ -1,17 +1,26 @@
 /* Mobile */
 
-.grid {
+.section-gallery {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: center;
   align-content: center;
   grid-gap: 10px;
 }
 
-.grid img {
+.gallery img {
   width: 100%;
-  height: auto;
+  /* height auto jezeli sa wertykalne obrazki */
+  /* height wartosc jezeli obrazki roznej */
+  height: 20vh;
   cursor: pointer;
+  object-fit: cover;
 }
 
 #lightbox {

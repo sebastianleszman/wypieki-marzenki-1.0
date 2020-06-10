@@ -1,0 +1,15 @@
+.card-1 .card__img {
+  background-image: url("/assets/cake1.jpg");
+}
+
+.card-2 .card__img {
+  background-image: url("/assets/beza1.jpg");
+}
+
+.card-3 .card__img {
+  background-image: url("/assets/talerz4.jpg");
+}
+
+.card-4 .card__img {
+  background-image: url("/assets/talerz3.jpg");
+}
