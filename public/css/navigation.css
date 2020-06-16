@@ -7,7 +7,12 @@
   background-color: var(--white);
   position: sticky;
   top: 0;
+  transition: all 1s ease-in-out;
   z-index: 2;
+}
+
+.hide {
+  transform: translateY(-8rem);
 }
 
 .logo {
@@ -64,7 +69,7 @@
 
 .hamburger__inner::before,
 .hamburger__inner::after {
-  content: "";
+  content: '';
 }
 
 .hamburger__inner::after {
