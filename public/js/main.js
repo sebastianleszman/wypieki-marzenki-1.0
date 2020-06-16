@@ -7,12 +7,14 @@ window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
   setTimeout(function () {
-    if (scroll > last) {
-      mainHeader.classList.add('hide');
-    } else {
-      mainHeader.classList.remove('hide');
+    if (last !== 0) {
+      if (scroll > last) {
+        mainHeader.classList.add('hide');
+      } else {
+        mainHeader.classList.remove('hide');
+      }
+      last = scroll;
     }
-    last = scroll;
   }, 100);
 });
 
@@ -27,6 +29,13 @@ function menuToggleClickHandler() {
 }
 
 menuToggleBtn.addEventListener('click', menuToggleClickHandler);
+
+window.addEventListener('click', function (event) {
+  if (event.target !== mainNav) {
+    mainNav.classList.remove('menu--active');
+    menuToggleBtn.classList.remove('hamburger--active');
+  }
+});
 
 document.addEventListener('keydown', function (event) {
   if (mainNav.classList.contains('menu--active')) {
