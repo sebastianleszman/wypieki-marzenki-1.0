@@ -6,16 +6,14 @@ let last = 0;
 window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
-  setTimeout(function () {
-    if (last !== 0) {
-      if (scroll > last) {
-        mainHeader.classList.add('hide');
-      } else {
-        mainHeader.classList.remove('hide');
-      }
-      last = scroll;
+  if (scroll > -1) {
+    if (scroll > last) {
+      mainHeader.classList.add('hide');
+    } else {
+      mainHeader.classList.remove('hide');
     }
-  }, 100);
+    last = scroll;
+  }
 });
 
 // Navbar
