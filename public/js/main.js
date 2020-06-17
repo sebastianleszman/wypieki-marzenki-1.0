@@ -2,9 +2,9 @@
 
 const mainHeader = document.querySelector('.nav-scroll');
 let last = 0;
+let scrollBottom = window.innerHeight;
 
 window.addEventListener('scroll', function () {
-  let scrollBottom = window.innerHeight;
   let scroll = document.documentElement.scrollTop;
 
   if (scroll > -1 && scroll < scrollBottom) {
@@ -22,20 +22,21 @@ window.addEventListener('scroll', function () {
 const menuToggleBtn = document.querySelector('.main-header__nav-toggle-btn');
 const mainNav = document.querySelector('.main-header__nav');
 
-function menuToggleClickHandler(e) {
+menuToggleBtn.addEventListener('click', function (e) {
   e.stopPropagation();
+  console.log('click');
   mainNav.classList.toggle('menu--active');
   menuToggleBtn.classList.toggle('hamburger--active');
-}
+});
 
-menuToggleBtn.addEventListener('click', menuToggleClickHandler);
-
-window.addEventListener('touchstart', function (e) {
-  if (menuToggleBtn.classList.contains('menu--active')) {
-    if (e.target.getAttribute('class') !== 'main-header__nav-toggle-btn') {
-      mainNav.classList.remove('menu--active');
-      menuToggleBtn.classList.remove('hamburger--active');
-    }
+document.addEventListener('touchstart', function (e) {
+  e.stopPropagation();
+  if (
+    menuToggleBtn.classList.contains('hamburger--active') // tutaj skonczyc warunek
+  ) {
+    console.log('touch');
+    mainNav.classList.remove('menu--active');
+    menuToggleBtn.classList.remove('hamburger--active');
   }
 });
 
