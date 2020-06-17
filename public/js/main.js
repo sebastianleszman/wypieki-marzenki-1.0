@@ -1,13 +1,13 @@
 // header //
 
 const mainHeader = document.querySelector('.nav-scroll');
+let scrollBottom = document.documentElement.scrollHeight;
 let last = 0;
 
 window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
-  let scrollBottom = document.documentElement.scrollHeight;
 
-  if (scroll > -1 || scroll > scrollBottom - 1) {
+  if (scroll > -1 || scroll < scrollBottom) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
