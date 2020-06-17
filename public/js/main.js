@@ -5,8 +5,9 @@ let last = 0;
 
 window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
+  let scrollBottom = document.documentElement.scrollHeight;
 
-  if (scroll > -1) {
+  if (scroll > -1 || scroll > scrollBottom) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
@@ -21,15 +22,16 @@ window.addEventListener('scroll', function () {
 const menuToggleBtn = document.querySelector('.main-header__nav-toggle-btn');
 const mainNav = document.querySelector('.main-header__nav');
 
-function menuToggleClickHandler() {
+function menuToggleClickHandler(e) {
+  e.stopPropagation();
   mainNav.classList.toggle('menu--active');
   menuToggleBtn.classList.toggle('hamburger--active');
 }
 
 menuToggleBtn.addEventListener('click', menuToggleClickHandler);
 
-window.addEventListener('click', function (event) {
-  if (event.target !== mainNav) {
+window.addEventListener('click', function (e) {
+  if (e.target.getAttribute('class') !== 'main-header__nav') {
     mainNav.classList.remove('menu--active');
     menuToggleBtn.classList.remove('hamburger--active');
   }
