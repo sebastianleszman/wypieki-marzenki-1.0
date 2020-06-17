@@ -7,7 +7,7 @@ let last = 0;
 window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
-  if (scroll > -1 && scroll < scrollBottom) {
+  if (scroll > -1 && scroll < scrollBottom - 1) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
@@ -31,7 +31,7 @@ function menuToggleClickHandler(e) {
 menuToggleBtn.addEventListener('click', menuToggleClickHandler);
 
 window.addEventListener('touchstart', function (e) {
-  if (e.target.getAttribute('class') !== 'main-header__nav') {
+  if (e.target.getAttribute('class') !== 'main-header__nav-toggle-btn') {
     mainNav.classList.remove('menu--active');
     menuToggleBtn.classList.remove('hamburger--active');
   }
