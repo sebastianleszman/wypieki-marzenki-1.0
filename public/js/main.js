@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
 
   if (
     scroll > -1 &&
-    document.documentElement.scrollHeight - document.documentElement.scrollTop >
+    document.documentElement.scrollHeight - document.documentElement.scrollTop <
       document.documentElement.clientHeight
   ) {
     if (scroll > last) {
