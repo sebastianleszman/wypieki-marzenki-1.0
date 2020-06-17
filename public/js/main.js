@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
   console.log(scroll + 'scroll');
   console.log(scrollBottom + 'bottom');
 
-  if (scroll > -1 && document.documentElement.scrollHeight - document.documentElement.scrollTop > document.documentElement.clientHeight {
+  if (scroll > -1 && document.documentElement.scrollHeight - document.documentElement.scrollTop < document.documentElement.clientHeight {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
