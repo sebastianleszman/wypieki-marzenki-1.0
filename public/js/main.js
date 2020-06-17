@@ -4,20 +4,14 @@ const mainHeader = document.querySelector('.nav-scroll');
 let last = 0;
 let scrollBottom = document.documentElement.scrollHeight;
 
-var limit = Math.max(
-  document.body.scrollHeight,
-  document.body.offsetHeight,
-  document.documentElement.clientHeight,
-  document.documentElement.scrollHeight,
-  document.documentElement.offsetHeight
-);
+
 
 window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
   console.log(scroll + 'scroll');
   console.log(scrollBottom + 'bottom');
 
-  if (scroll > -1 && scroll + document.documentElement.clientHeight < limit) {
+  if (scroll > -1 && document.documentElement.scrollHeight - document.documentElement.scrollTop > document.documentElement.clientHeight {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
