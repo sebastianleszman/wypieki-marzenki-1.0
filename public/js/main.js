@@ -31,9 +31,11 @@ function menuToggleClickHandler(e) {
 menuToggleBtn.addEventListener('click', menuToggleClickHandler);
 
 window.addEventListener('touchstart', function (e) {
-  if (e.target.getAttribute('class') !== 'main-header__nav-toggle-btn') {
-    mainNav.classList.remove('menu--active');
-    menuToggleBtn.classList.remove('hamburger--active');
+  if (menuToggleBtn.classList.contains('menu--active')) {
+    if (e.target.getAttribute('class') !== 'main-header__nav') {
+      mainNav.classList.remove('menu--active');
+      menuToggleBtn.classList.remove('hamburger--active');
+    }
   }
 });
 
