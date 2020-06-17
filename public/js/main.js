@@ -7,7 +7,7 @@ let last = 0;
 window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
-  if (scroll > -1 || scroll < scrollBottom) {
+  if (scroll > -1 && scroll < scrollBottom) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
