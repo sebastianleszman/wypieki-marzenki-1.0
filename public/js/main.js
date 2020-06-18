@@ -1,19 +1,17 @@
 // header //
 
 const mainHeader = document.querySelector('.nav-scroll');
+
 let last = 0;
-let scrollBottom = document.documentElement.scrollHeight;
+let scrollHeight = document.documentElement.scrollHeight;
+let clientHeight = document.documentElement.clientHeight;
+let scroll = document.documentElement.scrollTop;
 
-window.addEventListener('scroll', function () {
-  let scroll = document.documentElement.scrollTop;
+document.addEventListener('scroll', function () {
   console.log(scroll + 'scroll');
-  console.log(scrollBottom + 'bottom');
+  console.log(scrollHeight + 'bottom');
 
-  if (
-    scroll > -1 &&
-    document.documentElement.scrollHeight - document.documentElement.scrollTop >
-      document.documentElement.clientHeight
-  ) {
+  if (scroll > -1 && scrollHeight - scroll >= clientHeight) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
