@@ -5,11 +5,9 @@ const mainHeader = document.querySelector('.nav-scroll');
 let last = 0;
 let scrollHeight = document.documentElement.scrollHeight;
 let clientHeight = document.documentElement.clientHeight;
-let scroll = document.documentElement.scrollTop;
 
 document.addEventListener('scroll', function () {
-  console.log(scroll + 'scroll');
-  console.log(scrollHeight + 'bottom');
+  let scroll = document.documentElement.scrollTop;
 
   if (scroll > -1 && scrollHeight - scroll >= clientHeight) {
     if (scroll > last) {
