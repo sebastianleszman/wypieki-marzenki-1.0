@@ -32,6 +32,11 @@ body {
   background-color: var(--white);
   color: var(--black);
   font-family: 'Roboto', sans-serif;
+
+  /* Rubber scrolling */
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
 img {
@@ -186,19 +191,24 @@ h6 {
 }
 
 .size-4 {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   font-weight: 300;
   line-height: 1.2;
 }
 
 .size-5 {
-  font-size: 0.25rem;
+  font-size: 0.5rem;
   font-weight: 300;
   line-height: 1.2;
 }
 
 .lead {
   font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.follow {
+  font-size: 0.6rem;
   font-weight: 300;
 }
 
