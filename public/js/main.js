@@ -9,14 +9,15 @@ let clientHeight = document.documentElement.clientHeight;
 document.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
-  if (scroll > -1) {
-    if (scroll > last) {
-      mainHeader.classList.add('hide');
-    } else if(scroll < last) {
-      mainHeader.classList.remove('hide');
-    } else if(scrollHeight - scroll < clientHeight){
-      mainHeader.classList.remove('hide');
+  if(scrollHeight - scroll > clientHeight){
+    if (scroll > -1) {
+      if (scroll > last) {
+        mainHeader.classList.add('hide');
+      } else if(scroll < last) {
+        mainHeader.classList.remove('hide');
+      } 
     }
+
     last = scroll;
   }
 });
