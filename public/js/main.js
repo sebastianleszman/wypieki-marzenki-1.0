@@ -10,10 +10,12 @@ document.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
   //&& scrollHeight - scroll >= clientHeight - 20
-  if (scroll > -1 && scroll < scrollHeight - clientHeight) {
+  if (scroll > -1 && scrollHeight - scroll > clientHeight) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else if(scroll < last) {
+      mainHeader.classList.remove('hide');
+    } else if(scrollHeight - scroll < clientHeight){
       mainHeader.classList.remove('hide');
     }
     last = scroll;
