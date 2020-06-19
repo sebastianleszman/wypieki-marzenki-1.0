@@ -6,8 +6,7 @@ let last = 0;
 let scrollHeight = document.documentElement.scrollHeight;
 let clientHeight = document.documentElement.clientHeight;
 
-let limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
-  document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+let limit = window.innerHeight;
 
 document.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
