@@ -12,10 +12,8 @@ document.addEventListener('scroll', function () {
   //&& scrollHeight - scroll >= clientHeight - 20
   if (scroll > -1 && scroll < scrollHeight - clientHeight) {
     if (scroll > last) {
-      mainHeader.classList.add('hide');
-    } else {
-      mainHeader.classList.remove('hide');
-    }
+      mainHeader.classList.toggle('hide');
+    } 
     last = scroll;
   }
 });
