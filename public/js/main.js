@@ -12,11 +12,12 @@ window.addEventListener('scroll', function () {
   let scroll = window.documentElement.scrollTop;
   
   if (scroll > -1 && scroll + windowHeight > documentHeight) {
-    if (scroll > last) {        mainHeader.classList.add('hide');
-      } else if(scroll < last) {
-        mainHeader.classList.remove('hide');
-      } 
-    }
+    if (scroll > last) {        
+      mainHeader.classList.add('hide');
+    } else if(scroll < last) {
+      mainHeader.classList.remove('hide');
+    } 
+  }
   last = scroll;
 });
 
