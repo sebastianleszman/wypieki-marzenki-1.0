@@ -32,7 +32,6 @@ body {
   background-color: var(--white);
   color: var(--black);
   font-family: 'Roboto', sans-serif;
-  overscroll-behavior: none;
 }
 
 img {
