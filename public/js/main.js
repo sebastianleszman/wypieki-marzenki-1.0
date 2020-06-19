@@ -9,9 +9,9 @@ let indowHeight = window.innerHeight;
 let documentHeight = document.documentElement.clientHeight;
 
 window.addEventListener('scroll', function () {
-  let scroll = window.documentElement.scrollTop;
+  let scroll = document.documentElement.scrollTop;
   
-  if (scroll > -1) {
+  if (scroll > -1 && scroll + windowHeight > documentHeight) {
     if (scroll > last) {        
       mainHeader.classList.add('hide');
     } else if(scroll < last) {
