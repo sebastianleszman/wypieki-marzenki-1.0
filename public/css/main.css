@@ -33,10 +33,7 @@ body {
   color: var(--black);
   font-family: 'Roboto', sans-serif;
 
-  /* Rubber scrolling */
-  height: 100%;
-  width: 100%;
-  overflow: auto;
+  scroll-padding: 0;
 }
 
 img {

@@ -6,7 +6,7 @@ let last = 0;
 let scrollHeight = document.documentElement.scrollHeight;
 let clientHeight = document.documentElement.clientHeight;
 
-document.addEventListener('scroll', function () {
+window.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
   if(scrollHeight - scroll > clientHeight){
@@ -18,7 +18,7 @@ document.addEventListener('scroll', function () {
       } 
     }
   }
-  
+
   last = scroll;
 });
 
