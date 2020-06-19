@@ -18,6 +18,7 @@ document.addEventListener('scroll', function () {
       } 
     }
   }
+  
   last = scroll;
 });
 
