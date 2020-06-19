@@ -17,9 +17,8 @@ document.addEventListener('scroll', function () {
         mainHeader.classList.remove('hide');
       } 
     }
-
-    last = scroll;
   }
+  last = scroll;
 });
 
 // Navbar
