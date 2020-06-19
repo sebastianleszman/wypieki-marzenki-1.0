@@ -6,12 +6,13 @@ let last = 0;
 let scrollHeight = document.documentElement.scrollHeight;
 let clientHeight = document.documentElement.clientHeight;
 
+document.ontouchmove = function(e) {e.preventDefault()};
+
 document.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
   //&& scrollHeight - scroll >= clientHeight - 20
-  if (scroll > -1 && scrollHeight - scroll > clientHeight) {
-    console.log('test')
+  if (scroll > -1) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
