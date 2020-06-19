@@ -5,8 +5,8 @@ const mainHeader = document.querySelector('.nav-scroll');
 let last = 0;
 let scrollHeight = document.documentElement.scrollHeight;
 let clientHeight = document.documentElement.clientHeight;
-let indowHeight = window.documentElement.height;
-let documentHeight = document.documentElement.height;
+let indowHeight = window.innerHeight;
+let documentHeight = document.documentElement.clientHeight;
 
 window.addEventListener('scroll', function () {
   let scroll = window.documentElement.scrollTop;
