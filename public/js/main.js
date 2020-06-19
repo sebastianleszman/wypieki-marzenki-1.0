@@ -6,13 +6,11 @@ let last = 0;
 let scrollHeight = document.documentElement.scrollHeight;
 let clientHeight = document.documentElement.clientHeight;
 
-let limit = window.innerHeight;
-
 document.addEventListener('scroll', function () {
   let scroll = document.documentElement.scrollTop;
 
   //&& scrollHeight - scroll >= clientHeight - 20
-  if (scroll > -1 && scroll > limit) {
+  if (scroll > -1 && scroll < scrollHeight - clientHeight) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
