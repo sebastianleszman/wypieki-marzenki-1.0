@@ -1,26 +1,5 @@
 // header //
 
-const mainHeader = document.querySelector('.nav-scroll');
-
-let last = 0;
-let scrollHeight = document.documentElement.scrollHeight;
-let clientHeight = document.documentElement.clientHeight;
-let indowHeight = window.innerHeight;
-let documentHeight = document.documentElement.clientHeight;
-
-window.addEventListener('scroll', function () {
-  let scroll = document.documentElement.scrollTop;
-  
-  if (scroll > -1 ) {
-    if (scroll > last) {        
-      mainHeader.classList.add('hide');
-    } else if(scroll < last) {
-      mainHeader.classList.remove('hide');
-    } 
-  }
-  last = scroll;
-});
-
 // Navbar
 
 const menuToggleBtn = document.querySelector('.main-header__nav-toggle-btn');
