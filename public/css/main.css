@@ -379,7 +379,7 @@ h6 {
 }
 
 /* Contact */
-/* 
+
 .contact {
   width: 100%;
   display: grid;
@@ -456,7 +456,7 @@ textarea:focus {
   padding: 1rem;
   color: var(--black);
   background-color: transparent;
-} */
+}
 
 
 
