@@ -26,12 +26,17 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   background-color: var(--white);
   color: var(--black);
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -87,6 +92,10 @@ h6 {
   padding-top: 1.5rem !important;
 }
 
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
 .py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
@@ -103,8 +112,16 @@ h6 {
   margin: 1.5rem !important;
 }
 
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
 .mt-4 {
   margin-top: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
 }
 
 .my-4 {
@@ -139,31 +156,48 @@ h6 {
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 1rem;
   color: var(--black);
   background-color: transparent;
   border-radius: 0.25rem;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  box-shadow: 0px 13px 15px -7px rgba(0, 0, 0, 0.4);
 }
 
 .btn-group-lg > .btn,
-.btn-lg {
-  padding: 0.5rem 1rem;
+.btn--lg {
+  padding: 0.5rem 1.25rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
-.btn-first {
+.btn--first {
   color: var(--white);
   background-color: var(--first);
   border-color: var(--first);
 }
 
-.btn-first:hover {
+.btn--second{
+  color: var(--black);
+  background-color: var(--fifth);
+  border-color: var(--fifth);
+}
+
+.btn--sharp {
+  border-radius: 0;
+}
+
+.btn--first:hover {
   background-color: var(--forth);
+}
+
+.btn--second:hover {
+  background-color: var(--dark);
+  border-color: var(--dark);
+  color: var(--fifth);
 }
 
 /* Font */
@@ -197,6 +231,10 @@ h6 {
   line-height: 1.2;
 }
 
+.highlight{
+  font-size: 0.9rem;
+}
+
 .lead {
   font-size: 0.75rem;
   font-weight: 300;
@@ -205,6 +243,22 @@ h6 {
 .follow {
   font-size: 0.6rem;
   font-weight: 300;
+}
+
+.f-100 {
+  font-weight: 100;
+}
+.f-200 {
+  font-weight: 200;
+}
+.f-300 {
+  font-weight: 300;
+}
+.f-500 {
+  font-weight: 500;
+}
+.f-700 {
+  font-weight: 700;
 }
 
 /* Card */
@@ -324,12 +378,163 @@ h6 {
   margin: 1rem;
 }
 
+/* Contact */
+
+.contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'c c i i i i i i i i i i'
+    '. f f f f f f f f f d d';
+}
+
+.panel-form {
+  padding: 2rem 0;
+  grid-area: f;
+}
+
+.panel-information {
+  text-align: left;
+  padding: 1rem 1rem 3rem 1rem;
+  background-color: var(--dark);
+  color: var(--white);
+  grid-area: i;
+}
+
+.panel-empty {
+  grid-area: c;
+  background-color: var(--fifth);
+}
+
+.panel-icon {
+  grid-area: d;
+  background-color: var(--fifth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-form label {
+  margin-top: 1rem;
+  display: block;
+}
+
+.panel-form input,
+textarea {
+  width: 90%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid silver;
+  box-shadow: 0;
+  box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+}
+
+.panel-form textarea {
+  border: 1px solid silver;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 2rem;
+}
+
+.panel-form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.panel-information .icon {
+  color: var(--fifth);
+}
+
+.panel-icon .icon-media {
+  font-size: 1.3rem;
+  padding: 1rem;
+  color: var(--black);
+  background-color: transparent;
+}
+
+
+
+/* footer */
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: rgba(54, 54, 54, 1);
+  padding: 2rem;
+}
+.options {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: center;
+}
+
+.category {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+
+}
+
+/* rzadek ikon */
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.icon {
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  margin: 0;
+}
+
+.icon-media {
+  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 0;
+  color: white;
+  background-color: transparent;
+  margin: 0;
+}
+
+.icon-copy {
+  color: rgba(188, 188, 188, 0.8);
+  font-size: inherit;
+}
+
+/* copyrights */
+.copyrights {
+  color: rgba(188, 188, 188, 0.8);
+}
+
+.category h4 {
+  color: white;
+  margin-bottom: 1.2rem;
+}
+
+.category p {
+  color: rgba(188, 188, 188, 0.8);
+}
+
 /* Mobile */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .img-box {
     display: block;
+  }
+  .options {
+    flex-direction: row;
   }
 }
 
